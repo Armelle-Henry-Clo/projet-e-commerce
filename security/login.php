@@ -1,12 +1,18 @@
 <?php
  require_once '../inc/header.php';
 
+ if(connect()):
+    header('location:../');
+    exit();
+endif;
+
+
 
  if(!empty($_POST)):
 
      $resultat=executeRequete("SELECT * FROM user WHERE email=:email",array(
              ':email'=>$_POST['email']
-             
+
      ));
 
 
