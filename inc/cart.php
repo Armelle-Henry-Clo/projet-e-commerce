@@ -12,7 +12,7 @@ function add(int $id)
 
     if(!empty($panier[$id])):
         $panier[$id]++;
-    // sinon on initialise la qutté à 1: 
+    // sinon on initialise la quantité à 1: 
     else:
         $panier[$id]=1;
     endif;
