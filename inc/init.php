@@ -1,6 +1,6 @@
 <?php
 
-$pdo = new PDO('mysql:host=localhost;dbname=site_ecommerce', 'root', 'rootZ', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+$pdo = new PDO('mysql:host=localhost;dbname=site_ecommerce', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
 // initiation de la session
 session_start();
@@ -66,8 +66,6 @@ function executeRequete($requete, $param = array())
         return false;
 
     }
-
-
 }
 
 
@@ -78,7 +76,6 @@ function connect(){
     else:
         return false;
     endif;
-
 }
 
 function admin(){
@@ -88,13 +85,14 @@ function admin(){
     else:
         return false;
     endif;
-
 }
+
 
 if (!isset($_SESSION['cart'])):
     $_SESSION['cart']=[];
 endif;
 
+
 require_once 'cart.php';
 
-
+?>

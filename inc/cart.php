@@ -96,8 +96,8 @@ function getTotal()
 
     return $total;
 
-
 }
+
 
 function getQuantity()
 {
@@ -110,8 +110,6 @@ function getQuantity()
     endforeach;
 
     return $total;
-
-
 
 }
 
